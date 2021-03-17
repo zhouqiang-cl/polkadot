@@ -24,20 +24,20 @@ futures = "0.3.12"
 service = { package = "polkadot-service", path = "../node/service", default-features = false, optional = true }
 polkadot-parachain = { path = "../parachain", optional = true }
 
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
 tracing-futures = "0.2.4"
-frame-benchmarking-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", optional = true }
-try-runtime-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", optional = true }
-sc-cli = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", optional = true }
-sc-service = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", optional = true }
-browser-utils = { package = "substrate-browser-utils", git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", optional = true }
+frame-benchmarking-cli = { git = "https://github.com/paritytech/substrate", optional = true , branch = "zeke-add-traces-polkadot-v0.8.29" }
+try-runtime-cli = { git = "https://github.com/paritytech/substrate", optional = true , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sc-cli = { git = "https://github.com/paritytech/substrate", optional = true , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sc-service = { git = "https://github.com/paritytech/substrate", optional = true , branch = "zeke-add-traces-polkadot-v0.8.29" }
+browser-utils = { package = "substrate-browser-utils", git = "https://github.com/paritytech/substrate", optional = true , branch = "zeke-add-traces-polkadot-v0.8.29" }
 
 # this crate is used only to enable `trie-memory-tracker` feature
 # see https://github.com/paritytech/substrate/pull/6745
-sp-trie = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
+sp-trie = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
 
 [build-dependencies]
-substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
+substrate-build-script-utils = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
 
 [features]
 default = [ "wasmtime", "db", "cli", "full-node", "trie-memory-tracker", "polkadot-parachain" ]

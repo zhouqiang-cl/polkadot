@@ -22,20 +22,20 @@ polkadot-overseer = { path = "../../overseer" }
 polkadot-primitives = { path = "../../../primitives" }
 polkadot-node-primitives = { path = "../../primitives" }
 
-sc-client-api = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
-sc-keystore = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
-sp-consensus-slots = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
-sp-blockchain = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
-sp-application-crypto = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false, features = ["full_crypto"] }
-sp-runtime = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29", default-features = false }
+sc-client-api = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sc-keystore = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-consensus-slots = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-blockchain = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-application-crypto = { git = "https://github.com/paritytech/substrate", default-features = false, features = ["full_crypto"] , branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-runtime = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "zeke-add-traces-polkadot-v0.8.29" }
 
 [dev-dependencies]
 parking_lot = "0.11.1"
 rand_core = "0.5.1" # should match schnorrkel
-sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
-sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
-sp-core = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
-sp-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.8.29" }
+sp-keyring = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-keystore = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-core = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
+sp-consensus-babe = { git = "https://github.com/paritytech/substrate", branch = "zeke-add-traces-polkadot-v0.8.29" }
 maplit = "1.0.2"
 polkadot-node-subsystem-test-helpers = { path = "../../subsystem-test-helpers" }
 assert_matches = "1.4.0"
