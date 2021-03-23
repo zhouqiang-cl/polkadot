@@ -18,6 +18,7 @@ use sp_std::{result, convert::TryFrom, marker::PhantomData, borrow::Borrow};
 use xcm::v0::{Error as XcmError, Result, MultiAsset, MultiLocation, Junction};
 use frame_support::traits::{Get, Fungibles};
 use xcm_executor::traits::{LocationConversion, TransactAsset};
+use sp_std::vec::Vec;
 
 /// Asset transaction errors.
 pub enum Error {
@@ -248,7 +249,7 @@ impl<
 		let (asset_id, amount) = Matcher::matches_fungibles(what)?;
 		let who = AccountIdConverter::from_location(who)
 			.ok_or(Error::AccountIdConversionFailed)?;
-		Assets::deposit(asset_id, &who, amount)
+		Assets::deposit(asset_id, who, amount)
 			.map_err(|e| XcmError::FailedToTransactAsset(e.into()))
 	}
 
@@ -260,7 +261,7 @@ impl<
 		let (asset_id, amount) = Matcher::matches_fungibles(what)?;
 		let who = AccountIdConverter::from_location(who)
 			.ok_or(Error::AccountIdConversionFailed)?;
-		Assets::withdraw(asset_id, &who, amount)
+		Assets::withdraw(asset_id, who, amount)
 			.map_err(|e| XcmError::FailedToTransactAsset(e.into()))?;
 		Ok(what.clone())
 	}
