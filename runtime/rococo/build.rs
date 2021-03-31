@@ -21,5 +21,6 @@ fn main() {
 		.with_current_project()
 		.import_memory()
 		.export_heap_base()
+		.append_to_rust_flags(r#"--cfg feature="with-tracing""#)
 		.build()
 }
