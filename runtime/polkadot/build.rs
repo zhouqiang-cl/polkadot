@@ -20,6 +20,7 @@ fn main() {
 	WasmBuilder::new()
 		.with_current_project()
 		.import_memory()
+		.append_to_rust_flags(r#"--cfg feature="with-tracing""#)
 		.export_heap_base()
 		.build()
 }
