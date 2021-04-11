@@ -1,4 +1,5 @@
 # Contributing
+test
 
 `Substrate` projects is a **OPENISH Open Source Project**
 
